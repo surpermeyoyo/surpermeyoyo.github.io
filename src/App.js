@@ -30,9 +30,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<Home data={this} />} />
+          <Route exact path="/" element={<Home data={this} />} />
         </Routes>
       </Router>
     );
